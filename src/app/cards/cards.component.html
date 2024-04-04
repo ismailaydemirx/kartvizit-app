@@ -1,0 +1,17 @@
+<main>
+    <div class="d-flex">
+        <div class="flex-grow-1">
+            <h1 class="page-title">Kartvizitler</h1>
+            <p class="page-description">Bu ekrandan kartvizitlerinizi yönetebilirsiniz.</p>
+            <hr>
+        </div>
+        <button mat-flat-button color="primary" (click)="openAddCardModule()">Yeni Kartvizit</button>
+    </div>
+    <div class="cards">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3" *ngFor="let card of cards">
+                <app-card-item [card]="card"></app-card-item>
+            </div>
+        </div>
+    </div>
+</main>
