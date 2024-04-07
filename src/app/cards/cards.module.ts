@@ -8,6 +8,11 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { CardModalComponent } from './card-modal/card-modal.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [CardsComponent, CardItemComponent, CardModalComponent],
@@ -17,6 +22,12 @@ import { CardModalComponent } from './card-modal/card-modal.component';
     MatCardModule,
     MatDialogModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatIconModule,
   ],
 })
 export class CardsModule {}

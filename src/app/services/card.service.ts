@@ -7,12 +7,30 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CardService {
+  cards!: Card[];
+
   constructor(
-    @Inject('apiUrl') private apiUrl:string,
-    private http: HttpClient) {}
+    @Inject('apiUrl') private apiUrl: string,
+    private http: HttpClient
+  ) {}
 
+  getCards(): void {
+    this.http
+      .get<Card[]>(this.apiUrl + '/cards')
+      .subscribe((res: Card[]) => {
+        this.cards = res;
+      });
+  }
 
-  getCards(): Observable<Card[]> {
-    return this.http.get<Card[]>(this.apiUrl + '/cards');
+  getUsers(): Observable<Card[]> {
+    return this.http.get<Card[]>('https://jsonplaceholder.typicode.com/posts');
+  }
+
+  addCard(card: Card): Observable<any> {
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', card);
+  }
+
+  updateCard(card: Card, cardId: number): Observable<any> {
+    return this.http.put(this.apiUrl + '/cards/' + cardId, card);
   }
 }

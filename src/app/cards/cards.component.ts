@@ -10,24 +10,18 @@ import { Card } from '../models/card';
   styleUrl: './cards.component.scss',
 })
 export class CardsComponent implements OnInit {
-  cards!: Card[];
-
-  constructor(public dialog: MatDialog, private cardService: CardService) {}
+  constructor(
+    public dialog: MatDialog,
+    public cardService: CardService
+  ) {}
 
   ngOnInit(): void {
-    this.getCards();
+    this.cardService.getCards();
   }
 
   openAddCardModule(): void {
     this.dialog.open(CardModalComponent, {
       width: '400px',
-    });
-  }
-
-  getCards() {
-    this.cardService.getCards().subscribe((res: Card[]) => {
-      console.log(res);
-      this.cards = res;
     });
   }
 }
