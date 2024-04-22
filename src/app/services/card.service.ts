@@ -15,11 +15,9 @@ export class CardService {
   ) {}
 
   getCards(): void {
-    this.http
-      .get<Card[]>(this.apiUrl + '/cards')
-      .subscribe((res: Card[]) => {
-        this.cards = res;
-      });
+    this.http.get<Card[]>(this.apiUrl + '/cards').subscribe((res: Card[]) => {
+      this.cards = res;
+    });
   }
 
   getUsers(): Observable<Card[]> {
@@ -27,10 +25,14 @@ export class CardService {
   }
 
   addCard(card: Card): Observable<any> {
-    return this.http.post('https://jsonplaceholder.typicode.com/posts', card);
+    return this.http.post(this.apiUrl + '/cards', card);
   }
 
   updateCard(card: Card, cardId: number): Observable<any> {
     return this.http.put(this.apiUrl + '/cards/' + cardId, card);
+  }
+
+  deleteCard(cardId: number): Observable<any> {
+    return this.http.delete(this.apiUrl + '/cards/' + cardId);
   }
 }
