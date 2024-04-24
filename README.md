@@ -1,5 +1,5 @@
 # Demo :
-https://master--poetic-dieffenbachia-301fe7.netlify.app/
+https://ia-cards.netlify.app/
 
 # KartvizitApp
 
