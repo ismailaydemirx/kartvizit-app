@@ -11,7 +11,6 @@ import { CardModalComponent } from './card-modal/card-modal.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
@@ -27,7 +26,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule,
     MatIconModule,
     MatProgressBarModule,
   ],

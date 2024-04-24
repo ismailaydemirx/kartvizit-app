@@ -1,16 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
 
-main{
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
     padding: 30px;
-    .page-title{
+
+    .page-title {
         font-size: 40px;
         color: #333;
     }
-    
-    .page-description{
+
+    .page-description {
         color: #777;
+    }
+}
+
+
+.mat-mdc-snack-bar-container {
+
+    color: white;
+
+    &.success {
+        .mat-mdc-snack-bar-label {
+            background-color: #198754;
+        }
+
+        .mdc-snackbar__surface {
+            background-color: #198754;
+        }
+    }
+
+    &.error {
+        .mat-mdc-snack-bar-label {
+            background-color: #dc3545;
+        }
+
+        .mdc-snackbar__surface {
+            background-color: #dc3545;
+        }
     }
 }

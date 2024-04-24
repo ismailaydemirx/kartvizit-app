@@ -12,6 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent],
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
+    MatSnackBarModule,
   ],
   providers: [
     {

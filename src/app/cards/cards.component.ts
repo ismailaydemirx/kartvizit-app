@@ -10,10 +10,7 @@ import { Card } from '../models/card';
   styleUrl: './cards.component.scss',
 })
 export class CardsComponent implements OnInit {
-  constructor(
-    public dialog: MatDialog,
-    public cardService: CardService
-  ) {}
+  constructor(public dialog: MatDialog, public cardService: CardService) {}
 
   ngOnInit(): void {
     this.cardService.getCards();
