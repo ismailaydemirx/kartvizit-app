@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CardService {
   cards!: Card[];
+  filteredCards!: Card[];
 
   constructor(
     @Inject('apiUrl') private apiUrl: string,
@@ -16,7 +17,7 @@ export class CardService {
 
   getCards(): void {
     this.http.get<Card[]>(this.apiUrl + '/cards').subscribe((res: Card[]) => {
-      this.cards = res;
+      this.cards = this.filteredCards = res;
     });
   }
 

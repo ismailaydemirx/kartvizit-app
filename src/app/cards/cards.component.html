@@ -1,11 +1,16 @@
 <main>
     <div class="d-flex">
         <div class="flex-grow-1">
-            <h1 class="page-title">Kartvizitler</h1>
-            <p class="page-description">Bu ekrandan kartvizitlerinizi yönetebilirsiniz.</p>
+            <h1 class="page-title">Cards</h1>
+            <p class="page-description">You can manage cards in this screen.</p>
             <hr>
         </div>
-        <button mat-flat-button color="primary" (click)="openAddCardModule()">Yeni Kartvizit</button>
+
+        <app-card-search></app-card-search>
+
+        <button mat-flat-button color="primary" style="margin-left: 16px; min-height: 55px;"
+            (click)="openAddCardModule()">Add New
+            Card</button>
     </div>
     <div class="cards">
         <div class="row">
@@ -18,7 +23,7 @@
                 <span>No cards found. <a class="text-primary" (click)="openAddCardModule()"> Click here </a>to add a
                     card</span>
             </div>
-            <div class=" col-12 col-md-4 col-lg-3" *ngFor="let card of cardService.cards">
+            <div class=" col-12 col-md-4 col-lg-3" *ngFor="let card of cardService.filteredCards">
                 <app-card-item [card]="card"></app-card-item>
             </div>
         </div>
