@@ -1,30 +1,101 @@
-# Demo :
-https://ia-cards.netlify.app/
-
 # KartvizitApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+KartvizitApp, kullanıcıların dijital kartvizitler oluşturmasına ve yönetmesine olanak tanıyan bir Angular uygulamasıdır.
 
-## Development server
+## 🌐 Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Uygulamayı canlı olarak incelemek için aşağıdaki bağlantıyı ziyaret edebilirsiniz:
 
-## Code scaffolding
+🔗 **[KartvizitApp Demo](https://ia-cards.netlify.app/)**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Proje Hakkında
 
-## Build
+Bu proje **Angular CLI 17.3.1** sürümü kullanılarak oluşturulmuştur.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Kurulum
 
-## Running unit tests
+Projeyi yerel ortamınıza kurmak için aşağıdaki adımları izleyin:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Depoyu klonlayın:**
+   ```sh
+   git clone https://github.com/kullaniciadi/kartvizitapp.git
+   ```
 
-## Running end-to-end tests
+2. **Proje dizinine gidin:**
+   ```sh
+   cd kartvizitapp
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Bağımlılıkları yükleyin:**
+   ```sh
+   npm install
+   ```
 
-## Further help
+## 💻 Geliştirme Sunucusu
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Aşağıdaki komutu çalıştırarak yerel geliştirme sunucusunu başlatabilirsiniz:
+
+```sh
+ng serve
+```
+
+Daha sonra tarayıcınızdan **[http://localhost:4200/](http://localhost:4200/)** adresine giderek uygulamayı görüntüleyebilirsiniz. Kaynak dosyalarda yapılan değişiklikler otomatik olarak yeniden yüklenecektir.
+
+## 🏗️ Proje Yapısı
+
+- **src/app/components/** → Uygulamanın bileşenleri
+- **src/app/services/** → API çağrıları ve iş mantığı için servisler
+- **src/assets/** → Statik dosyalar (görseller, JSON vb.)
+- **src/environments/** → Ortam değişkenleri (development & production)
+
+## 🛠️ Kullanılabilir Komutlar
+
+### 📌 Yeni Bir Bileşen Oluşturma
+
+```sh
+ng generate component component-name
+```
+
+Bunun yanı sıra, aşağıdaki komutlarla farklı Angular yapılarını oluşturabilirsiniz:
+
+```sh
+ng generate directive|pipe|service|class|guard|interface|enum|module
+```
+
+### 🔨 Projeyi Derleme
+
+```sh
+ng build
+```
+
+Derleme çıktıları **dist/** klasöründe saklanacaktır.
+
+### ✅ Birim Testleri Çalıştırma
+
+```sh
+ng test
+```
+
+Birim testleri **Karma** kullanarak çalıştırılır.
+
+### 🔍 End-to-End (e2e) Testleri Çalıştırma
+
+```sh
+ng e2e
+```
+
+Bu komutu kullanabilmek için öncelikle bir e2e test paketi yüklenmelidir.
+
+## 📖 Daha Fazla Bilgi
+
+Daha fazla bilgi için **Angular CLI** komut referansına göz atabilirsiniz:
+
+🔗 [Angular CLI Dokümantasyonu](https://angular.io/cli)
+
+---
+
+📌 **Katkıda Bulunmak İster misiniz?**
+Eğer projeye katkıda bulunmak istiyorsanız, lütfen bir **pull request** oluşturun veya bir **issue** açın.
+
+💡 **Lisans:** MIT
+
